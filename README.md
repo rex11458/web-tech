@@ -80,6 +80,7 @@ W3C盒子模型：设置元素的 height/width 属性指的是 content 部分的
 </span><br>
 
 ##### 定位方案
+
 <span style="font-size:0.8em">
 1、<b>常规流向</b>。CSS2中，常规流向包含块框的块格式化，行内框的行内格式化，块框或行内框的相对定位，以及压缩和插入框的定位。
 <br>
@@ -122,6 +123,7 @@ W3C盒子模型：设置元素的 height/width 属性指的是 content 部分的
 
 
 <b style="font-size:1.2em">浮动</b>
+
 清除浮动的方式：
  * 投机取巧法 
   `<div style="clear:both;"></div>`
@@ -149,11 +151,14 @@ W3C盒子模型：设置元素的 height/width 属性指的是 content 部分的
 | inline-block | 行内块元素。（CSS2.1 新增的值）                                                |
 | list-item    | 此元素会作为列表显示。                                                         |
 | table        | 此元素会作为块级表格来显示（类似table），表格前后带有换行符                    |
+
 <b style="font-size:1.2em">'display'，'position'和'float'间的相互关系</b>
+
  * 如果'display'设置为'none'，用户端必须忽略掉'position'和'float'。在这种情况下，元素不产生框。
  * 否则，'position'设置为'absolute'或'fixed'，'display'设置为'block'且'float'设置为'none'。框的位置将由'top'，'right'，'bottom'和'left'属性和该框的包含块确定。
  * 否则， 如果'float'的值不是'none'，'display'设置为'block'并且该框浮动。
  * 否则，应用指定的其它'display'属性。
+
 ### 3. BFC规范（块级上下文：block formatting context）   
 
 * 内部的 Box 会在垂直方向上一个接一个放置。
@@ -193,7 +198,9 @@ CSS伪类：用于向某些选择器添加特殊的效果。
 | :visited     | 将样式添加到被访问过的链接     |
 | :first-child | 将样式添加到元素的第一个子元素 |
 | :lang        | 定义指定的元素中使用的语言     |
+
 CSS3新增伪类
+
 | 新增伪类              | 作用                                                |
 | --------------------- | --------------------------------------------------- |
 | p:first-of-type       | 选择属于其父元素的首个`<p>`元素的每个`<p>`元素。    |
@@ -222,6 +229,7 @@ CSS伪元素：用于将特殊的效果添加到某些选择器。伪元素代�
 | ::after        | 在某元素之后插入某些内容 |
 
 ###5. CSS优化、提高性能的方法
+
 * 修复解析错误（Parsing errors should be fixed）
 * 避免使用多类选择符（Don't use adjoining classes）
 * 移除空的css规则（Remove empty rules）
