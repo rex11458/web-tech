@@ -141,6 +141,7 @@ W3C盒子模型：设置元素的 height/width 属性指的是 content 部分的
 
 <b style="font-size:1.2em">display属性</b>
 `inline | block | list-item | run-in | compact | marker |table | inline-table | table-row-group | table-header-group |table-footer-group | table-row | table-column-group | table-column |table-cell | table-caption | none | inherit`
+
 | 值           | 描述                                                                           |
 | ------------ | ------------------------------------------------------------------------------ |
 | inline       | 默认。此元素会被显示为内联元素，元素前后没有换行符。                           |
@@ -178,8 +179,11 @@ W3C盒子模型：设置元素的 height/width 属性指的是 content 部分的
             <div style="width:30px;height:30px;float:left;background-color:green"></div>
     </div>
 </div>
+
 ### 4. 伪类与伪元素
+
 CSS伪类：用于向某些选择器添加特殊的效果。
+
 | 伪类         | 作用                           |
 | ------------ | ------------------------------ |
 | :hover       | 将样式添加到鼠标悬浮的元素     |
@@ -207,7 +211,9 @@ CSS3新增伪类
 | :enabled              | 控制表单控件的可用状态。                            |
 | :disabled             | 控制表单控件的禁用状态。                            |
 | :checked              | 单选框或复选框被选中。                              |
+
 CSS伪元素：用于将特殊的效果添加到某些选择器。伪元素代表了某个元素的子元素，这个子元素虽然在逻辑上存在，但却并不实际存在于文档树中。
+
 | 伪元素         | 作用                     |
 | -------------- | ------------------------ |
 | ::first-letter | 将样式添加到文本的首字母 |
