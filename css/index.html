@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./basic.css" rel="stylesheet" type="text/css"/>
+    <style>
+        /* 子选择器 */
+        #nav li {
+            background-color: red;
+        }
+
+        #nav li * {
+            background: none;
+        }
+
+        h2+p {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #777;
+        }
+
+        acronym[title] {
+            border-bottom: 3px dotted #999;
+        }
+
+        acronym[title]:hover {
+            cursor: help;
+        }
+
+        .blogroll a[rel~="co-worker"] {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="nav">
+        <li>Home</li>
+        <li>Services
+            <ul>
+                <li>Design</li>
+                <li>Development</li>
+            </ul>
+
+        </li>
+    </ul>
+    <h2>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa</h2>
+    <p>BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</p>
+    <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+    <p>The term <acronym title="self-contained">SCUBA</acronym>is an acronym ranter than an abbreviation</p>
+
+    <ul class="blogroll">
+        <li>
+            <a href="#" rel="friend met colleague co-worker">Jeremy Keith</a>
+        </li>
+        <li>
+            <a href="#">Jeremy Keith2</a>
+        </li>
+    </ul>
+
+</body>
+
+</html>

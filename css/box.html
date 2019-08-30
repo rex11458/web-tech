@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./basic.css" rel="stylesheet" type="text/css" />
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #red {
+            width: 200px;
+            height: 200px;
+            left: 100px;
+            top: 100px;
+            background-color: red;
+            padding: 10px;
+            box-sizing: padding-box;
+        }
+
+        #blue {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            top: 100px;
+            left: 100px;
+        }
+
+        #green {
+            position: fixed;
+            top: 150px;
+            left: 150px;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        #yellow {}
+    </style>
+</head>
+
+<body>
+    <div id="red">
+        <div id="blue" />
+        <div id="green"></div>
+    </div>
+</body>
+
+</html>

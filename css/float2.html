@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./basic.css" rel="stylesheet" type="text/css" />
+    <style>
+        #root{
+            zoom: 1;
+        }
+        #root:after{
+            content: '';
+            display:block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root" style="border: 4px solid blue;">
+        <div style="float: left;border:4px solid red;">我是浮动元素1</div>
+        <div style="float: left;border:4px solid yellow;"">我是浮动元素1</div>
+        <!-- <br clear="all"/> -->
+        <!-- <div style="clear: both"></div> -->
+    </div>
+    <div style=" border: 4px solid gray;">我是页脚</div>
+</body>
+
+</html>
