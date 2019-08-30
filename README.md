@@ -228,7 +228,7 @@ CSS伪元素：用于将特殊的效果添加到某些选择器。伪元素代�
 | ::before       | 在某元素之前插入某些内容 |
 | ::after        | 在某元素之后插入某些内容 |
 
-###5. CSS优化、提高性能的方法
+### 5. CSS优化、提高性能的方法
 
 * 修复解析错误（Parsing errors should be fixed）
 * 避免使用多类选择符（Don't use adjoining classes）
