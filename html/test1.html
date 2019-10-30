@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>css阻塞</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      h1 {
+        color: red !important
+      }
+    </style>
+    <script>
+
+      function foo () {
+        console.log(document.querySelectorAll('h1'))
+      }
+      foo()
+    //   window.onload = function(){
+    //       foo()
+    //   }
+    </script>
+    <!-- <link href="https://github.githubassets.com/assets/site-d20aa35917cf810095fab7458ea2a8e4.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <h1>这是红色的</h1>
+    
+    <script>
+      console.log('hello world')
+      
+      foo()
+    </script>
+  </body>
+</html>

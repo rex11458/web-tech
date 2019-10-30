@@ -291,7 +291,10 @@ Last-Modified: Mon, 26 Aug 2019 03:36:12 GMT
 6. 服务器向浏览器回送一条HTTP响应报文；
 7. 关闭连接，浏览器显示文档。
 
-
+##### TCP 连接三次握手
+1. 请求新的TCP连接时，客户端要向服务器发送一个小的TCP分组(通常是40~60个字节)。这个分组中设置了一个特殊的SYN标记，说明这是一个连接请求。
+2. 如果服务器接收了这个连接，就会对一些连接参数进行计算，并向客户端回送一个TCP分组，这个分组中的SYN和ACK标记都被置位，说明连接请求已被接收。
+3. 最后客户端向服务器回送一条确认信息，通知它连接已经成功建立。
 
 
 ##### Telnet
@@ -337,3 +340,65 @@ Content-Language: zh-CN
     发起自动HTTP请求的半智能Web客户端
 
 超文本传输协议 https://www.ietf.org/rfc/rfc2616.pdf
+
+##### URL 统一资源定位符
+```
+<schema>://<user>:<password>@<host>:<port>/<path>;<params>?<query>#<frag>
+```
+
+##### HTTP报文
+ * <b>报文是如何流动的</b>
+
+
+
+
+ * HTTP报文的三个组成部分（起始行、首部和实体的主体部分）
+ * 请求和响应报文之间的区别
+ * 请求报文支持的各种功能（方法）
+ * 和响应报文一起返回的各种状态码
+ * 各种各样的HTTP首部都是用来做什么的
+
+##### TCP连接 
+
+TCP/IP分组交换网络分层协议集
+
+##### HTTP连接处理
+Connection 首部
+Close 
+Keep-Alive  HTTP/1.1 默认
+
+GET在浏览器回退时是无害的，而POST会再次提交请求。
+GET产生的URL地址可以被Bookmark，而POST不可以。
+GET请求会被浏览器主动cache，而POST不会，除非手动设置。
+GET请求只能进行url编码，而POST支持多种编码方式。
+GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。
+GET请求在URL中传送的参数是有长度限制的，而POST么有。
+对参数的数据类型，GET只接受ASCII字符，而POST没有限制。
+GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。
+GET参数通过URL传递，POST放在Request body中。
+
+##### 代理
+
+##### 缓存
+    * 缓存的优点：
+        1、缓存减少了冗余的数据传输，节省了网络费用
+        2、缓解了网络瓶颈问题
+        3、降低了额对原始服务器的要求
+        4、降低了距离时延
+Cache-Control:
+max-age=600
+no-cache：在于原始服务器进行新鲜度再验证之前，缓存不能提供给客户使用。
+no-store
+Expires 绝对时间， 服务器时间不同步会不正确，应当用max-age
+
+Last-Modified: Tue, 15 Oct 2019 12:52:45 GMT
+If-Modified-Since: Tue, 15 Oct 2019 12:52:45 GMT
+
+##### Cache-Control请求指令
+
+    Cache-Control:max-stale=`<s>`
+    缓存可以随意提供过期的文件。如果指定参数`<s>`，在这段时间内，文档就不能过期。这条指令放松了缓存的规则
+    Cache-Control:min-fresh=`<s>`
+    至少在未来`<s>`内要保持新鲜
+    Cache-Control:max-age=`<s>`
+    缓存无法返回缓存时间长于`<s>`秒的文档。触发同事发送max-stale指令，在这种情况下，使用时间可能会超过其过期时间
